@@ -1,0 +1,22 @@
+{
+  "name": "prodetotal2",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ziggurat/prodetotal2",
+  "authors": [
+    "Manuel Corrales <manuelcorrales@gmail.com>"
+  ],
+  "description": "Description here",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic-ui": "~0.15",
+    "jquery": ""
+  }
+}
