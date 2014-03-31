@@ -2,6 +2,15 @@ Prodetotal2::Application.routes.draw do
   
   root 'application#serve_ember_app'
 
+  namespace :api, default: { format: 'json' } do
+    namespace :v1 do
+      get 'competitions' => 'competition#index'
+      get 'competitions/:competition_id' => 'competition#show'
+      post 'competitions' => 'competition#create'
+      put 'competitions/:competition_id' => 'competition#update'
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

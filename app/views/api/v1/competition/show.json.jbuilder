@@ -1,0 +1,1 @@
+json.extract! @competition, :id, :name, :exact_match_points, :result_match_points, :no_match_points, :no_forecast_points, :start_date, :end_date
