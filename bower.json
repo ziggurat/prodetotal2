@@ -16,7 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "semantic-ui": "~0.15",
+    "bootstrap": "",
+    "bootstrap-social": "",
     "jquery": ""
   }
 }

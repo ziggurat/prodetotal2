@@ -14,10 +14,13 @@
 //= require handlebars
 //= require ember
 //= require ember-data
-//= require semantic-ui/build/packaged/javascript/semantic.min
+//= require bootstrap/dist/js/bootstrap.min
 //= require_self
 //= require prodetotal2
 
 // for more details see: http://emberjs.com/guides/application/
-Prodetotal2 = Ember.Application.create();
+Prodetotal2 = Ember.Application.create({
+		LOG_TRANSITIONS: true
+	}
+);
 
