@@ -1,0 +1,1 @@
+json.extract! @team, :name, :image_url
