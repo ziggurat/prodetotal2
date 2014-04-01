@@ -1,47 +1,28 @@
 FORMAT: 1A
-HOST: http://www.google.com
+HOST: prodetotal-ziggurat.rhcloud.com
 
 # prodetotal
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
-
-# Group Notes
-Notes related resources of the **Notes API**
+Prode Total
 
 ## Competitions [/competitions]
-### List all Notes [GET]
+### List all Competitions [GET]
 + Response 200 (application/json)
 
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
+        [{"id":1,"exact_match_points":6,"result_match_points":3,"no_match_points":0,"no_forecast_points":0,"name":"Copa del Mundo Brasil 2014","start_date":"2014-03-31","end_date":"2014-03-31","created_at":"2014-03-31T23:35:40.444Z","updated_at":"2014-03-31T23:35:40.444Z"},{"id":2,"exact_match_points":6,"result_match_points":3,"no_match_points":0,"no_forecast_points":0,"name":"Champions League 2014","start_date":"2014-03-31","end_date":"2014-03-31","created_at":"2014-04-01T00:32:24.781Z","updated_at":"2014-04-01T00:32:24.781Z"}]
 
-### Create a Note [POST]
+### Create a Competition [POST]
 + Request (application/json)
 
-        { "title": "Buy cheese and bread for breakfast." }
+        {    
+            "exact_match_points": 6,
+            "result_match_points": 3,
+            "no_match_points": 0,
+            "no_forecast_points": 0,
+            "name": "Copa del Mundo Brasil 2014",
+            "start_date": "2014-03-31T19:27:42.242Z",
+            "end_date": "2014-03-31T19:27:42.242Z"
+        }
 
 + Response 201 (application/json)
 
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Note [/notes/{id}]
-A single Note object with all its details
-
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-
-### Retrieve a Note [GET]
-+ Response 200 (application/json)
-
-    + Header
-
-            X-My-Header: The Value
-
-    + Body
-
-            { "id": 2, "title": "Pick-up posters from post-office" }
-
-### Remove a Note [DELETE]
-+ Response 204
+        {"id":3,"exact_match_points":6,"result_match_points":3,"no_match_points":0,"no_forecast_points":0,"name":"Copa del Mundo Brasil 2014","start_date":"2014-03-31","end_date":"2014-03-31","created_at":"2014-04-01T00:33:32.615Z","updated_at":"2014-04-01T00:33:32.615Z"}
