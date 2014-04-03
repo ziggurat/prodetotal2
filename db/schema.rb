@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140401192258) do
   end
 
   create_table "teams", force: true do |t|
+    t.string   "key"
     t.string   "name"
     t.string   "image_url"
     t.datetime "created_at"

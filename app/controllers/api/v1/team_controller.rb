@@ -37,6 +37,6 @@ class Api::V1::TeamController < ApplicationController
 
 	private
 	def team_params
-		params.permit(:name, :image_url)
+		params.permit(:name, :key)
 	end
 end
