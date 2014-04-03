@@ -1,0 +1,1 @@
+config.include Requests::JsonHelpers, :type => :controller
