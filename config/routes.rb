@@ -4,10 +4,19 @@ Prodetotal2::Application.routes.draw do
 
   namespace :api, default: { format: 'json' } do
     namespace :v1 do
+      # Competitions
       get 'competitions' => 'competition#index'
       get 'competitions/:competition_id' => 'competition#show'
       post 'competitions' => 'competition#create'
       put 'competitions/:competition_id' => 'competition#update'
+
+
+      # Teams
+      get 'teams' => 'team#index'
+      get 'teams/:team_id' => 'team#show'
+      post 'teams' => 'team#create'
+      put 'teams/:team_id' => 'team#update'
+      delete 'teams/:team_id' => 'team#destroy'
     end
   end
 

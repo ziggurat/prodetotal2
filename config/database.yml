@@ -17,11 +17,15 @@ development:
 test:
   adapter: postgresql
   database: test_prode
+  user: prodetotal
+  pass: prodetotal
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
   database: prod_prode
+  user: prodetotal
+  pass: prodetotal
   pool: 5
   timeout: 5000
