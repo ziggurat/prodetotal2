@@ -156,9 +156,9 @@ PLATFORMS
 
 DEPENDENCIES
   ember-rails
-  ember-source (= 1.4.0)
+  ember-source
   factory_girl
-  jbuilder (~> 1.2)
+  jbuilder
   pg
   rails (= 4.0.4)
   rspec-rails

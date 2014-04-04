@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 gem 'yajl-ruby'
 
 group :doc do
@@ -37,7 +37,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'ember-rails'
-gem 'ember-source', '1.4.0' # or the version you need
+gem 'ember-source'
 
 gem 'factory_girl'
 gem 'rspec-rails'
