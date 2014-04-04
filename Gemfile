@@ -41,3 +41,5 @@ gem 'ember-source', '1.4.0' # or the version you need
 
 gem 'factory_girl'
 gem 'rspec-rails'
+
+gem 'rubocop', require: false
