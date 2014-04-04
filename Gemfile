@@ -44,3 +44,4 @@ gem 'factory_girl', group: [:test]
 gem 'rspec-rails', group: [:test]
 
 gem 'rubocop', require: false
+gem 'coveralls', require: false
