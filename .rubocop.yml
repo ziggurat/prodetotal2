@@ -1,0 +1,21 @@
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+    - app/**
+    - spec/**
+  Exclude:
+    - app/views/**
+    - app/assets/**
+    - spec/spec_helper.rb
+    - lib/**
+    - vendor/**
+    - db/**
+    - config/**
+    - script/**
+    - !ruby/regexp /old_and_unused\.rb$/
+
+CyclomaticComplexity:
+  Severity: warning
+Documentation:
+  Enabled: false
