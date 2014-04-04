@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 
 # Use sqlite3 as the database for Active Record
+gem 'sqlite3', group: [:test]
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -39,7 +40,7 @@ end
 gem 'ember-rails'
 gem 'ember-source', '>= 1.5.0'
 
-gem 'factory_girl'
-gem 'rspec-rails'
+gem 'factory_girl', group: [:test]
+gem 'rspec-rails', group: [:test]
 
 gem 'rubocop', require: false

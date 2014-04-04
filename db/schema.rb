@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140401192258) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "competitions", force: true do |t|
     t.integer  "exact_match_points",  default: 6
     t.integer  "result_match_points", default: 3
