@@ -23,4 +23,5 @@ Prodetotal2 = Ember.Application.create({
 		LOG_TRANSITIONS: true
 	}
 );
+Prodetotal2.ApplicationAdapter = DS.FixtureAdapter;
 
