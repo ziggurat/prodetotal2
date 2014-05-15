@@ -14,7 +14,6 @@
 //= require handlebars
 //= require ember
 //= require ember-data
-//= require bootstrap/dist/js/bootstrap.min
 //= require_self
 //= require prodetotal2
 
