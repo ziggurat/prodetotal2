@@ -15,9 +15,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "bootstrap": "",
-    "bootstrap-social": "",
-    "jquery": ""
+  "dependencies": {    
+    "jquery": "",
+    "semantic-ui": ""
   }
 }
