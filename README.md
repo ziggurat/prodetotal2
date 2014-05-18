@@ -10,9 +10,9 @@ Prode Total
 
 <a name="competitions"/>
 #### Competitions
-* [GET '/competitions'](getcompetitions)
-* [GET '/competitions/:competition_id'](getcompetitions/competition_id)
-* [POST '/competitions'](postcompetitions)
+* [GET '/competitions'](#getcompetitions)
+* [GET '/competitions/:competition_id'](#getcompetitions/competition_id)
+* [POST '/competitions'](#postcompetitions)
 
 <a name="getcompetitions"/>
 ##### GET '/competitions'
