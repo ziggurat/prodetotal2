@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401192258) do
+ActiveRecord::Schema.define(version: 20140515174931) do
 
   create_table "competitions", force: true do |t|
     t.integer  "exact_match_points",  default: 6
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 20140401192258) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "matches", force: true do |t|
+    t.integer  "competition_id"
+    t.integer  "local_id"
+    t.integer  "visitor_id"
+    t.datetime "date"
+    t.integer  "local_score"
+    t.integer  "visitor_score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "matches", ["competition_id"], name: "index_matches_on_competition_id"
+  add_index "matches", ["local_id"], name: "index_matches_on_local_id"
+  add_index "matches", ["visitor_id"], name: "index_matches_on_visitor_id"
 
   create_table "teams", force: true do |t|
     t.string   "key"

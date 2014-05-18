@@ -17,6 +17,11 @@ Prodetotal2::Application.routes.draw do
       post 'teams' => 'team#create'
       put 'teams/:team_id' => 'team#update'
       delete 'teams/:team_id' => 'team#destroy'
+
+      # Matches
+      get 'competitions/:competition_id/matches' => 'match#matches_for_competition'
+      post 'matches' => 'match#create'
+      post 'matches/set_score' => 'match#set_score'
     end
   end
 
