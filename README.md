@@ -6,13 +6,11 @@ Prode Total
 ===========
 
 ## API
-### [Competitions](#competitions)
 
-<a name="competitions"/>
-#### Competitions
 * [GET '/competitions'](#getcompetitions)
 * [GET '/competitions/:competition_id'](#getcompetitions/competition_id)
 * [POST '/competitions'](#postcompetitions)
+* [GET '/competitions/:competition_id/matches'](#matches_of_competition)
 
 <a name="getcompetitions"/>
 ##### GET '/competitions'
@@ -39,8 +37,17 @@ GET '/competitions'
 ````json
 GET '/competitions/:competition_id'
 {
-
-}
+    "id": 1,
+    "exact_match_points": 6,
+    "result_match_points": 3,
+    "no_match_points": 0,
+    "no_forecast_points": 0,
+    "name": "Copa del Mundo Brasil 2014",
+    "start_date": "2014-03-31",
+    "end_date": "2014-03-31",
+    "created_at": "2014-05-18T16:26:42.188Z",
+    "updated_at": "2014-05-18T16:26:42.188Z"
+  }
 ````
 <a name="postcompetitions"/>
 ##### POST '/competitions'
@@ -70,4 +77,12 @@ response
   "created_at": "2014-05-18T16:26:42.188Z",
   "updated_at": "2014-05-18T16:26:42.188Z"
 }
+````
+<a name="matches_of_competition"/>
+##### GET '/competitions/:competition_id/matches'
+````json
+#GET '/competitions/:competition_id/matches'
+[
+
+]
 ````
