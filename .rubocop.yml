@@ -19,3 +19,5 @@ CyclomaticComplexity:
   Severity: warning
 Documentation:
   Enabled: false
+LineLength:
+  Max: 120
