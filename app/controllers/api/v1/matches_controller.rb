@@ -1,6 +1,6 @@
 module Api
   module V1
-    class MatchController < ApplicationController
+    class MatchesController < ApplicationController
     	def matches_for_competition
     		@matches = Match.where({competition: params[:competition_id]})
     	end

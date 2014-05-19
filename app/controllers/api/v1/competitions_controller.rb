@@ -1,6 +1,6 @@
 module Api
 	module V1
-		class CompetitionController < ApplicationController
+		class CompetitionsController < ApplicationController
 
 			def index
 				@competitions = Competition.all
