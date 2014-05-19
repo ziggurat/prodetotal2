@@ -81,7 +81,7 @@ response
 <a name="matches_of_competition"/>
 ##### GET '/competitions/:competition_id/matches'
 ````json
-#GET '/competitions/:competition_id/matches'
+// GET '/competitions/:competition_id/matches'
 [
 
 ]
