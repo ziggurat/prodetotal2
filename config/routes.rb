@@ -1,9 +1,12 @@
 Prodetotal2::Application.routes.draw do
-  
+
   root 'application#serve_ember_app'
 
   namespace :api, default: { format: 'json' } do
     namespace :v1 do
+      # Users
+      post 'users/login' => 'users#login'
+
       # Competitions
       get 'competitions' => 'competitions#index'
       get 'competitions/:competition_id' => 'competitions#show'

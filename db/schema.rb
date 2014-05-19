@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515174931) do
+ActiveRecord::Schema.define(version: 20140519222808) do
 
   create_table "competitions", force: true do |t|
     t.integer  "exact_match_points",  default: 6
@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(version: 20140515174931) do
     t.string   "key"
     t.string   "name"
     t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "facebook_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
