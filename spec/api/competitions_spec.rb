@@ -3,7 +3,14 @@ require 'spec_helper'
 describe 'Competition management' do
 
   it 'creates a Competition, retrieve it and modify it' do
-    post '/api/v1/competitions', exact_match_points: 6, result_match_points: 3 , no_match_points: 1, no_forecast_points: 0, name: "Copa del Mundo Brasil 2014", start_date: "2014-06-12", end_date: "2014-07-14"
+    post '/api/v1/competitions',  exact_match_points: 6,
+                                  result_match_points: 3,
+                                  no_match_points: 1,
+                                  no_forecast_points: 0,
+                                  name: 'Copa del Mundo Brasil 2014',
+                                  start_date: '2014-06-12',
+                                  end_date: '2014-07-14'
+
     response.status.should eql(201)
     post_json = JSON.parse(response.body)
     expect(post_json['exact_match_points']).to eq(6)

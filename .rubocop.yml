@@ -2,17 +2,17 @@ AllCops:
   Include:
     - Rakefile
     - config.ru
-    - app/**
-    - spec/**
+    - app/**/*
+    - spec/**/*
   Exclude:
-    - app/views/**
-    - app/assets/**
+    - app/views/**/*
+    - app/assets/**/*
     - spec/spec_helper.rb
-    - lib/**
-    - vendor/**
-    - db/**
-    - config/**
-    - script/**
+    - lib/**/*
+    - vendor/**/*
+    - db/**/*
+    - config/**/*
+    - script/**/*
     - !ruby/regexp /old_and_unused\.rb$/
 
 CyclomaticComplexity:
