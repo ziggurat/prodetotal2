@@ -1,0 +1,11 @@
+body {
+	font-family: 'Ubuntu', sans-serif;
+	background-image: url('grassBG.jpg');
+	background-position: center top;
+}
+
+.title {
+	font-family: 'Chango', cursive;
+	font-size: 8em;
+    text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+}
