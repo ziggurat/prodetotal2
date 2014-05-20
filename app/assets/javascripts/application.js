@@ -14,6 +14,7 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require facebook.js
 //= require_self
 //= require prodetotal2
 
