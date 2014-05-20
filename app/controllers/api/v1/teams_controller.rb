@@ -1,6 +1,6 @@
 module Api
   module V1
-    class TeamController < ApplicationController
+    class TeamsController < ApplicationController
       def index
         @teams = Team.all
       end
