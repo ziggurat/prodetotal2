@@ -16,11 +16,17 @@ class ApplicationController < ActionController::Base
     fc = FacebookLogin.new(fb_id, fb_token)
     @user = fc.fetch_or_create_user
     if @user.nil?
-      render json: {user: 'User authentication failed'}, status: :unauthorized
+      render json: {error: 'User authentication failed'}, status: :unauthorized
     end
   end
 
   def current_user
     @user
+  end
+
+  def can_access?
+    if params[:user_id] != @user.facebook_id
+      render json: {error: "You can't access this resource"}, status: :unauthorized
+    end
   end
 end

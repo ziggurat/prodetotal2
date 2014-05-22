@@ -5,12 +5,19 @@
     </div>
   </div>
   <div class="row">
-    <div class="six wide column"></div>
+    <div class="five wide column"></div>
     <div class="six wide column">
-      <div {{action 'login'}} class="ui facebook button" id="fb_login_btn">
-        <i class="facebook icon fluid"></i>
-          Login con Facebook
-      </div>
+      {{#if loginDisabled}}      
+        <div class="ui facebook button fluid">
+          <i class="facebook icon"></i>
+            Checking facebook login status...
+        </div>
+      {{else}}
+        <div {{action 'login'}} class="ui facebook button fluid" id="fb_login_btn">
+          <i class="facebook icon"></i>
+            Login con Facebook
+        </div>
+      {{/if}}
     </div>
   </div>
 </div>

@@ -1,7 +1,8 @@
 module Api
   module V1
     class UsersController < ApplicationController
-      def get
+      before_action :can_access?
+      def show        
         render json: current_user
       end
     end
