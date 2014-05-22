@@ -35,7 +35,7 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 
 gem 'ember-rails'
 gem 'ember-source', '>= 1.5.0'
@@ -45,3 +45,5 @@ gem 'rspec-rails', group: [:test]
 
 gem 'rubocop', require: false
 gem 'coveralls', require: false
+
+gem "koala"

@@ -1,4 +1,6 @@
 Prodetotal2.LoginController = Ember.Controller.extend({
+	fbUserId: '',
+	fbUserToken: '',
 	check_fb_login: function(response) {
 		console.log(response);
 	    // The response object is returned with a status field that lets the
@@ -7,7 +9,23 @@ Prodetotal2.LoginController = Ember.Controller.extend({
 	    // for FB.getLoginStatus().
 	    if (response.status === 'connected') {
 	      // Logged into your app and Facebook.
-	      console.log("Logged in!!!!")
+	      $.ajax({
+			  url: "/api/v1/user",
+			  beforeSend: function(xhr){
+			  	xhr.setRequestHeader('Facebook-User-Id', response.authResponse.userID);
+			  	xhr.setRequestHeader('Facebook-User-Token', response.authResponse.accessToken);
+			  },
+			  statusCode: {
+			    401: function() {
+			      alert( "Unauthorized!" );
+			    }
+			  }
+			}).done(function(data) {
+				console.log(data);
+				alert("Done!");
+			}).fail(function() {
+				alert("Failed");
+			});
 	    } else if (response.status === 'not_authorized') {
 	      // The person is logged into Facebook, but not your app.
 	      $('#fb_login_btn').removeClass("disabled");

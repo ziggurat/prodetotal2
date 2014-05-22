@@ -5,7 +5,7 @@ Prodetotal2::Application.routes.draw do
   namespace :api, default: { format: 'json' } do
     namespace :v1 do
       # Users
-      post 'users/login' => 'users#login'
+      get 'user' => 'users#get'
 
       # Competitions
       get 'competitions' => 'competitions#index'
