@@ -21,6 +21,6 @@ Prodetotal2.LoginRoute = Ember.Route.extend({
 	      	FB.getLoginStatus(function(response) {
 		      loginController.check_fb_login(response);
 		    });  
-	      };	    
+	  };	    
 	}
 });
