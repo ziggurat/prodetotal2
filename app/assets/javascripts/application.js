@@ -22,5 +22,3 @@ Prodetotal2 = Ember.Application.create(Ember.Facebook, {
 	LOG_TRANSITIONS: true
 });
 
-Prodetotal2.ApplicationAdapter = DS.FixtureAdapter;
-
