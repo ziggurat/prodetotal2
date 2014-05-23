@@ -41,4 +41,13 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  config.before(:each) do
+    # Mock the Koala facebook api call performed in FacebookLogin class
+    # so no call is made to facebook when testing.
+    Koala::Facebook::API.any_instance.stub(:get_object) do
+      @me = {}
+      @me["name"] = "Test User"
+    end
+  end
 end
