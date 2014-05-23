@@ -3,7 +3,7 @@ module Api
     class UsersController < ApplicationController
       before_action :can_access?
       def show        
-        render json: current_user
+        @user = current_user
       end
     end
   end
