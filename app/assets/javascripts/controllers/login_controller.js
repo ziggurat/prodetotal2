@@ -18,8 +18,7 @@ Prodetotal2.LoginController = Ember.Controller.extend({
         }
       });
       this.store.find('user', response.authResponse.userID).then(
-        function(user) {
-          console.log(user);
+        function(user) {          
           Prodetotal2.currentUser = user;
           loginController.transitionToRoute('home');
         },
