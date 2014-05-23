@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
     fb_token = request.headers['Facebook-User-Token']
     fc = FacebookLogin.new(fb_id, fb_token)
     @user = fc.fetch_or_create_user
+    @user.token = fb_token
     if @user.nil?
       render json: {error: 'User authentication failed'}, status: :unauthorized
     end
