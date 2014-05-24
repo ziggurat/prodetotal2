@@ -1,8 +1,15 @@
-Prodetotal2.HomeRoute = Ember.Route.extend({
+Prodetotal2.HomeRoute = Prodetotal2.AuthenticatedRoute.extend({
     model: function() {
-      //return this.store.findById('user', Prodetotal2.currentUser.get("id"));
-      return {
-        blue: "BLUE!"
-      };
+      return this.store.findById('user', localStorage.userId);
+    },
+    actions: {
+      error: function(reason, transition) {
+        if (reason.status === 401) {
+          console.log("Unauthorized");
+          this.transitionTo("login");
+        } else {
+          alert('Something went wrong');
+        }
+      }
     }
 });

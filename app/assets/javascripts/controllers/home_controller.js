@@ -1,2 +1,2 @@
-Prodetotal2.HomeController = Ember.Controller.extend({
+Prodetotal2.HomeController = Ember.ObjectController.extend({
 });

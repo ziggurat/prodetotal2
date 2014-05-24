@@ -3,7 +3,7 @@ Prodetotal2.LoginController = Ember.Controller.extend({
   actions: {
     login: function() {
       console.log('Login function in LoginController');
-      FB.login(function(response) {				
+      FB.login(function(response) {
         this.check_fb_login(response);
       }.bind(this));
     }
@@ -11,6 +11,8 @@ Prodetotal2.LoginController = Ember.Controller.extend({
   check_fb_login: function(response) {
     var loginController = this;
     if (response.status === 'connected') {
+      this.set('token', response.authResponse.accessToken);
+      this.set('userId', response.authResponse.userID)
       $.ajaxSetup({
         beforeSend: function(xhr) {
             xhr.setRequestHeader('Facebook-User-Id', response.authResponse.userID);
@@ -18,12 +20,12 @@ Prodetotal2.LoginController = Ember.Controller.extend({
         }
       });
       this.store.find('user', response.authResponse.userID).then(
-        function(user) {          
+        function(user) {
           Prodetotal2.currentUser = user;
           loginController.transitionToRoute('home');
         },
         function(error) {
-          loginController.enableLogin();  
+          loginController.enableLogin();
         }
       );
     } else if (response.status === 'not_authorized') {
@@ -34,5 +36,13 @@ Prodetotal2.LoginController = Ember.Controller.extend({
   },
   enableLogin: function() {
     this.set('loginDisabled', false);
-  }
+  },
+  token: localStorage.token,
+  tokenChanged: function() {
+    localStorage.token = this.get('token');
+  }.observes('token'),
+  userId: localStorage.userId,
+  userIdChanged: function() {
+    localStorage.userId = this.get("userId");
+  }.observes('userId')
 });
