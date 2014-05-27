@@ -8,8 +8,34 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require semantic-ui/build/packaged/css/semantic
+ *= require Font-Awesome/css/font-awesome.min
+ *= require bootstrap/dist/css/bootstrap
  *= require login
  *= require_self
- *= require_tree .
  */
+
+body {
+	padding-top: 70px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.panel {
+	background-color: rgba(55, 55, 55, 0.5);
+	color: white;
+}
+
+.panel-default > .panel-heading {
+	background-color: rgba(55, 55, 55, 0.8);
+	color: white;
+}
+
+.panel-title {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.nav-brand {
+	font-family: 'Chango', cursive;
+}
+
+

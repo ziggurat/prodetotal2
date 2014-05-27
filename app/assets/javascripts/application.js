@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap/dist/js/bootstrap.min
 //= require handlebars
 //= require ember
 //= require ember-data

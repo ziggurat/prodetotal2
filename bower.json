@@ -17,6 +17,7 @@
   ],
   "dependencies": {    
     "jquery": "",
-    "semantic-ui": ""
+    "Font-Awesome": "",
+    "bootstrap": ""
   }
 }

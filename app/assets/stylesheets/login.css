@@ -1,11 +1,12 @@
 body {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	background-image: url('maracana_1600.jpg');
 	background-position: center top;
 }
 
-.title {
+.huge-brand {
+	color: black;
 	font-family: 'Chango', cursive;
-	font-size: 8em;
+	font-size: 6em;
     text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }
