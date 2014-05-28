@@ -18,6 +18,8 @@
   "dependencies": {    
     "jquery": "",
     "Font-Awesome": "",
-    "bootstrap": ""
+    "bootstrap": "",
+    "slimScroll": "",
+    "moment": ""
   }
 }

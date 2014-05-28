@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require Font-Awesome/css/font-awesome.min
- *= require bootstrap/dist/css/bootstrap
+ *= require bootstrap/dist/css/bootstrap.min
  *= require login
  *= require_self
  */
@@ -20,13 +20,18 @@ body {
 }
 
 .panel {
-	background-color: rgba(55, 55, 55, 0.5);
+	background-color: rgba(55, 55, 55, 0.75);
 	color: white;
 }
 
 .panel-default > .panel-heading {
-	background-color: rgba(55, 55, 55, 0.8);
+	background-color: rgba(55, 55, 55, 0.9);
 	color: white;
+}
+
+.panel>.list-group {
+	overflow-y: auto;
+	max-height: 387px;
 }
 
 .panel-title {
@@ -40,6 +45,42 @@ body {
 
 .list-group-item {
 	background-color: inherit;
+	color: white;
 }
+
+a.list-group-item {
+	color: white;
+}
+
+
+a.list-group-item:hover {
+	background-color: inherit;
+}
+
+a.list-group-item-heading {
+	color: white;
+}
+
+.img-thumbnail {
+	background-color: inherit;
+}
+
+.img-rounded {
+	border-radius: 6px;
+	background-color: rgba(256, 256, 256, 0.4);
+	padding: 5px 5px 5px 5px;
+}
+
+.thumb-96 {
+	height: 96px;
+	width: 96px;
+	max-width: 96px;
+}
+
+.competition-item {
+	min-height: 130px;
+}
+
+
 
 

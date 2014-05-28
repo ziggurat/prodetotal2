@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require bootstrap/dist/js/bootstrap.min
+//= require slimScroll/jquery.slimscroll.min
+//= require moment/min/moment.min
 //= require handlebars
 //= require ember
 //= require ember-data
