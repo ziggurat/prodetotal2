@@ -28,7 +28,7 @@
           <h3 class="panel-title text-center"><i class="fa fa-trophy"></i> Competencias</h3>
         </div>      
         <ul class="list-group">
-          {{#each competitions}}
+          {{#each}}
             <span class="list-group-item competition-item">
               <div class="row">
                 <div class="col-xs-4">
@@ -38,7 +38,7 @@
                   <p class="list-group-item-text text-center"><strong>{{name}}</strong></p>
                   <p class="text-center"><small>{{datetime startDate format="DD/MM/YYYY"}} al {{datetime endDate format="DD/MM/YYYY"}}</small></p>
                   <div class="center-block">
-                    <button type="button" class="btn btn-xs btn-primary center-block">Crear desafio</button>
+                    <button {{action test}}type="button" class="btn btn-xs btn-primary center-block">Crear desafio</button>
                   </div>              
                 </div>            
               </div>
@@ -46,6 +46,9 @@
           {{/each}}          
         </ul>
       </div>  
+    </div>
+    <div class="col-xs-12 col-md-8">
+      {{outlet}}
     </div>
   </div>
 </div>
