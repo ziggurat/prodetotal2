@@ -1,5 +1,8 @@
 Prodetotal2.AuthenticatedRoute = Ember.Route.extend({
   beforeModel: function() {
+    /*if (!this.controllerFor('login').get('token')) {
+      this.redirectToLogin(transition);
+    }*/
     console.log("Before model on AuthenticatedRoute");
     Ember.$.ajaxSetup({
       beforeSend: function(xhr) {
