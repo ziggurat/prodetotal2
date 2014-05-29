@@ -17,7 +17,8 @@ Prodetotal2.AuthenticatedRoute = Ember.Route.extend({
         console.log("Unauthorized");
         this.transitionTo("login");
       } else {
-        //alert('Something went wrong');
+        console.log("Something went wrong!!");
+        console.log(reason);
         this.transitionTo("login");
       }
     }

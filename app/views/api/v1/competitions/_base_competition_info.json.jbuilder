@@ -1,0 +1,9 @@
+json.id competition.id
+json.name competition.name
+json.exact_match_points competition.exact_match_points
+json.result_match_points competition.result_match_points
+json.no_match_points competition.no_match_points
+json.no_forecast_points competition.no_forecast_points
+json.start_date competition.start_date
+json.end_date competition.end_date
+json.logo competition.logo

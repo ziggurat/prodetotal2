@@ -10,13 +10,18 @@ Prodetotal2.LoginController = Ember.Controller.extend({
   },
   check_fb_login: function(response) {
     var loginController = this;
-    if (response.status === 'connected') {
+    if (response.status === 'connected') {      
       localStorage.token = response.authResponse.accessToken;
       localStorage.userId = response.authResponse.userID;
-
+      Ember.$.ajaxSetup({
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader('Facebook-User-Id', localStorage.userId);
+            xhr.setRequestHeader('Facebook-User-Token', localStorage.token);
+        }
+      });
       this.store.find('user', response.authResponse.userID).then(
         function(user) {
-          Prodetotal2.currentUser = user;
+          localStorage.currentUser = JSON.stringify(user);
           loginController.transitionToRoute('competitions');
         },
         function(error) {
@@ -29,7 +34,10 @@ Prodetotal2.LoginController = Ember.Controller.extend({
       loginController.enableLogin();
     }
   },
-  enableLogin: function() {
+  enableLogin: function() {    
+    localStorage.currentUser = null;
+    localStorage.token = null;
+    localStorage.userId = null;
     this.set('loginDisabled', false);
   }
 });

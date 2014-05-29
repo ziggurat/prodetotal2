@@ -1,28 +1,6 @@
-<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-  	<div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand nav-brand" href="#">Prode Total</a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#"><i class="fa fa-inbox"></i> Mensajes</a></li>
-      </ul>
-      <ul class="nav navbar-nav pull-right">
-        <p class="navbar-text visible-md visible-lg"><i class="fa fa-user"></i> {{user.name}}</p>
-        <li><a href="#"><i class="fa fa-sign-out"></i> Salir</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12 col-md-3">
+    <div class="col-xs-12 col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title text-center"><i class="fa fa-trophy"></i> Competencias</h3>
@@ -32,15 +10,18 @@
             <span class="list-group-item competition-item">
               <div class="row">
                 <div class="col-xs-4">
-                    <img src="assets/UEFA_Champions_League_logo_2.svg" class="img-responsive thumb-96 img-rounded" alt="Responsive image">
+                    <img {{bind-attr src=logo}} class="img-responsive thumb-96 img-rounded" alt="Responsive image">
                 </div>
                 <div class="col-xs-8">
                   <p class="list-group-item-text text-center"><strong>{{name}}</strong></p>
                   <p class="text-center"><small>{{datetime startDate format="DD/MM/YYYY"}} al {{datetime endDate format="DD/MM/YYYY"}}</small></p>
-                  <div class="center-block">
-                    {{#link-to 'competition' this type="button" class="btn btn-xs btn-primary center-block"}}
+                  <div class="btn-group-vertical center-block">
+                    {{#link-to 'competition.new_challenge' this type="button" class="btn btn-xs btn-primary center-block"}}
                       Crear desafio
                     {{/link-to}}
+                    {{#link-to 'competition.matches' this type="button" class="btn btn-xs btn-primary center-block"}}
+                      Ver partidos
+                    {{/link-to}}  
                   </div>
                 </div>
               </div>

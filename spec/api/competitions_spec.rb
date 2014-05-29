@@ -25,14 +25,14 @@ describe 'Competition management' do
     get "/api/v1/competitions/#{competition_id}.json"
     response.status.should eql(200)
     get_json = JSON.parse(response.body)
-    expect(get_json['id']).to eq(competition_id)
-    expect(get_json['exact_match_points']).to eq(6)
-    expect(get_json['result_match_points']).to eq(3)
-    expect(get_json['no_match_points']).to eq(1)
-    expect(get_json['no_forecast_points']).to eq(0)
-    expect(get_json['name']).to eq('Copa del Mundo Brasil 2014')
-    expect(get_json['start_date']).to eq('2014-06-12')
-    expect(get_json['end_date']).to eq('2014-07-14')
+    expect(get_json['competition']['id']).to eq(competition_id)
+    expect(get_json['competition']['exact_match_points']).to eq(6)
+    expect(get_json['competition']['result_match_points']).to eq(3)
+    expect(get_json['competition']['no_match_points']).to eq(1)
+    expect(get_json['competition']['no_forecast_points']).to eq(0)
+    expect(get_json['competition']['name']).to eq('Copa del Mundo Brasil 2014')
+    expect(get_json['competition']['start_date']).to eq('2014-06-12')
+    expect(get_json['competition']['end_date']).to eq('2014-07-14')
 
     put "/api/v1/competitions/#{competition_id}", no_match_points: 0
     response.status.should eql(200)
