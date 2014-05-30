@@ -1,4 +1,17 @@
-.flag-48 { background: url(flags-48.png) no-repeat; }
+.flag-48 {	
+	background: url(flags-48.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.local-team {
+	padding-left: 10px;
+}
+
+.visit-team {
+	padding-right: 10px;
+}
+
 .ASEAN { width: 48px; height: 48px; background-position: 0 0; }
 .Afghanistan { width: 48px; height: 48px; background-position: 0 -49px; }
 .African_Union { width: 48px; height: 48px; background-position: 0 -98px; }
