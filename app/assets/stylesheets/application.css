@@ -32,11 +32,6 @@ body {
 	color: #CCCCCC;
 }
 
-.panel>.list-group {
-	overflow-y: auto;
-	max-height: 387px;
-}
-
 .panel-title {
 	font-weight: 700;
 	text-transform: uppercase;
@@ -70,7 +65,7 @@ a.list-group-item-heading {
 
 .img-rounded {
 	border-radius: 6px;
-	background-color: rgba(256, 256, 256, 0.4);
+	background-color: rgba(256, 256, 256, 0.9);
 	padding: 5px 5px 5px 5px;
 }
 
@@ -89,17 +84,3 @@ a.list-group-item-heading {
 .competition-item {
 	min-height: 130px;
 }
-
-.ib {
-	display: inline-block;
-}
-
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
-
-
-
-

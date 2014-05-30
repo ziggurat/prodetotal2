@@ -19,7 +19,9 @@
     "jquery": "",
     "Font-Awesome": "",
     "bootstrap": "",
+    "malihu-custom-scrollbar-plugin": "",
+    "moment": "",
     "slimScroll": "",
-    "moment": ""
+    "iscroll": ""
   }
 }
