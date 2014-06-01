@@ -30,6 +30,7 @@ body {
 .panel-default > .panel-heading {
 	background-color: rgba(55, 55, 55, 0.9);
 	color: #CCCCCC;
+	border: none;
 }
 
 .panel-title {
@@ -44,6 +45,7 @@ body {
 .list-group-item {
 	background-color: inherit;
 	color: white;
+	border: none;
 }
 
 a.list-group-item {
@@ -83,4 +85,12 @@ a.list-group-item-heading {
 
 .competition-item {
 	min-height: 130px;
+}
+
+.list-group .list-group-item {
+  background: rgba(0,0,0,0.5);
+}
+/* select alternating items starting with the second item */
+.list-group .list-group-item:nth-of-type(2n) {
+  background: rgba(50,50,50,0.2);
 }
