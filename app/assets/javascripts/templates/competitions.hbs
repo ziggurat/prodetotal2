@@ -15,28 +15,7 @@
                 </div>
                 <div class="col-xs-8">
                   <p class="list-group-item-text text-center"><strong>{{name}}</strong></p>
-                  <p class="text-center"><small>{{datetime startDate format="DD/MM/YYYY"}} al {{datetime endDate format="DD/MM/YYYY"}}</small></p>
-                  <div class="text-center">
-                    {{#link-to 'competition.new_challenge' this type="button" class="btn btn-xs btn-primary"}}
-                      Crear desafio
-                    {{/link-to}}
-                    {{#link-to 'competition.matches' this type="button" class="btn btn-xs btn-primary"}}
-                      Ver partidos
-                    {{/link-to}}  
-                  </div>
-                </div>
-              </div>
-            </span>
-          {{/each}}
-          {{#each}}
-            <span class="list-group-item competition-item">
-              <div class="row">
-                <div class="col-xs-4">
-                    <img {{bind-attr src=logo}} class="img-responsive thumb-96 img-rounded" alt="Responsive image">
-                </div>
-                <div class="col-xs-8">
-                  <p class="list-group-item-text text-center"><strong>{{name}}</strong></p>
-                  <p class="text-center"><small>{{datetime startDate format="DD/MM/YYYY"}} al {{datetime endDate format="DD/MM/YYYY"}}</small></p>
+                  <p class="text-center"><small>{{start_date}} al {{end_date}}</small></p>
                   <div class="text-center">
                     {{#link-to 'competition.new_challenge' this type="button" class="btn btn-xs btn-primary"}}
                       Crear desafio

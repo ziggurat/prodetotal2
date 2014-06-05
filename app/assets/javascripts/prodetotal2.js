@@ -8,4 +8,5 @@
 //= require_tree ./templates
 //= require ./router
 //= require_tree ./routes
+//= require ./api_adapter
 //= require_self

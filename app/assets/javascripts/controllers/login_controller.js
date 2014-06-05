@@ -18,8 +18,8 @@ Prodetotal2.LoginController = Ember.Controller.extend({
             xhr.setRequestHeader('Facebook-User-Id', localStorage.userId);
             xhr.setRequestHeader('Facebook-User-Token', localStorage.token);
         }
-      });
-      this.store.find('user', response.authResponse.userID).then(
+      });      
+      return this.adapter.getUser(response.authResponse.userID).then(
         function(user) {
           localStorage.currentUser = JSON.stringify(user);
           loginController.transitionToRoute('competitions');
