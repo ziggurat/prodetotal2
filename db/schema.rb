@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140519222808) do
     t.integer  "result_match_points", default: 3
     t.integer  "no_match_points",     default: 0
     t.integer  "no_forecast_points",  default: 0
+    t.string   "logo"
     t.string   "name"
     t.date     "start_date"
     t.date     "end_date"
