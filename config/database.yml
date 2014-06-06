@@ -3,6 +3,7 @@ development:
   database: dev_prode
   username: prodetotal
   pass: prodetotal
+  password: prodetotal
   pool: 5
   timeout: 5000
 
@@ -14,6 +15,7 @@ test:
   database: db/test_prode
   username: prodetotal
   pass: prodetotal
+  password: prodetotal
   pool: 5
   timeout: 5000
 
@@ -22,5 +24,6 @@ production:
   database: prod_prode
   username: prodetotal
   pass: prodetotal
+  password: prodetotal
   pool: 5
   timeout: 5000
