@@ -204,6 +204,7 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 4.0.2)
   sdoc
+  simplecov
   sqlite3
   therubyracer
   uglifier (>= 1.3.0)

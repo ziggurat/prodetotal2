@@ -45,7 +45,8 @@ gem 'ember-source', '>= 1.5.0'
 gem 'factory_girl', group: [:test]
 gem 'rspec-rails', group: [:test]
 
-gem 'rubocop', require: false
+gem 'rubocop', require: false, group: [:development]
+gem 'simplecov', require: false, group: [:development, :test]
 gem 'coveralls', require: false
 
 gem "koala"
