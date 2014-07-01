@@ -8,10 +8,11 @@ Prodetotal2::Application.routes.draw do
       get 'users/:user_id' => 'users#show'
 
       # Competitions
-      get 'competitions' => 'competitions#index'
+      get 'competitions' => 'competitions#index' # ?old=true
       get 'competitions/:competition_id' => 'competitions#show'
       post 'competitions' => 'competitions#create'
       put 'competitions/:competition_id' => 'competitions#update'
+      # get 'search/competitions/:term'
 
 
       # Teams
@@ -25,6 +26,18 @@ Prodetotal2::Application.routes.draw do
       get 'competitions/:competition_id/matches' => 'matches#matches_for_competition'
       post 'matches' => 'matches#create'
       post 'matches/set_score' => 'matches#set_score'
+
+      # Forecasts
+      # post 'forecasts'
+      # get 'competitions/:competition_id/forecasts'
+      # get 'users/user_id/competitions/:competition_id/forecasts'
+
+      # Challenges
+      # post 'challenges'
+      # get 'challenges/:challenge_id'
+      # get 'challenges/:challenge_id/ranking'
+      # get 'search/challenges/:term'
+
     end
   end
 
