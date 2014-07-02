@@ -6,7 +6,7 @@ class Match < ActiveRecord::Base
   validate :local_team_exists
   validate :visitor_team_exists
 
-  def set_score(local_score, visitor_score)
+  def save_score(local_score, visitor_score)
     self.local_score = local_score
     self.visitor_score = visitor_score
     self.save!
