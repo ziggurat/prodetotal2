@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Login' do
+describe 'API Login' do
 
   it 'login for the first into the application' do
     expect(User.all.count).to eq(0)

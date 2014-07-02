@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Competition management' do
+describe 'API Competition' do
 
   it 'creates a Competition, retrieve it and modify it' do
     post '/api/v1/competitions',  exact_match_points: 6,

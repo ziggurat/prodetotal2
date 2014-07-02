@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Team management' do
+describe 'API Team' do
 
   it 'creates a Team, retrieve it and modify it' do
     # Create team
