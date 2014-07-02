@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140702193116) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "challenges", force: true do |t|
     t.string   "name"
     t.string   "description"
@@ -22,8 +25,8 @@ ActiveRecord::Schema.define(version: 20140702193116) do
     t.datetime "updated_at"
   end
 
-  add_index "challenges", ["competition_id"], name: "index_challenges_on_competition_id"
-  add_index "challenges", ["owner_id"], name: "index_challenges_on_owner_id"
+  add_index "challenges", ["competition_id"], name: "index_challenges_on_competition_id", using: :btree
+  add_index "challenges", ["owner_id"], name: "index_challenges_on_owner_id", using: :btree
 
   create_table "competitions", force: true do |t|
     t.integer  "exact_match_points",  default: 6
@@ -50,9 +53,9 @@ ActiveRecord::Schema.define(version: 20140702193116) do
     t.datetime "updated_at"
   end
 
-  add_index "matches", ["competition_id"], name: "index_matches_on_competition_id"
-  add_index "matches", ["local_id"], name: "index_matches_on_local_id"
-  add_index "matches", ["visitor_id"], name: "index_matches_on_visitor_id"
+  add_index "matches", ["competition_id"], name: "index_matches_on_competition_id", using: :btree
+  add_index "matches", ["local_id"], name: "index_matches_on_local_id", using: :btree
+  add_index "matches", ["visitor_id"], name: "index_matches_on_visitor_id", using: :btree
 
   create_table "teams", force: true do |t|
     t.string   "key"

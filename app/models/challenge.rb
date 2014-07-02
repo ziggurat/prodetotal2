@@ -7,6 +7,10 @@ class Challenge < ActiveRecord::Base
   validate :owner_exists
   validate :competition_exists
 
+  def self.search_by_name(term)
+    where("name ILIKE ?", "%#{term}%")
+  end
+
   private
   def owner_exists
     valid = User.exists?(owner_id)
