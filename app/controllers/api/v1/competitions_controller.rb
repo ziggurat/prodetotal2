@@ -2,7 +2,7 @@ module Api
   module V1
     class CompetitionsController < ApplicationController
       def index
-        @competitions = Competition.all
+        @competitions = Competition.near
       end
 
       def show
