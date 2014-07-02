@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519222808) do
+ActiveRecord::Schema.define(version: 20140702171510) do
+
+  create_table "challenges", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "owner_id"
+    t.integer  "competition_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "challenges", ["competition_id"], name: "index_challenges_on_competition_id"
+  add_index "challenges", ["owner_id"], name: "index_challenges_on_owner_id"
 
   create_table "competitions", force: true do |t|
     t.integer  "exact_match_points",  default: 6

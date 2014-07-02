@@ -37,6 +37,7 @@ Prodetotal2::Application.routes.draw do
       # get 'challenges/:challenge_id'
       # get 'challenges/:challenge_id/ranking'
       # get 'search/challenges/:term'
+      # post 'challenges/add_user'
 
     end
   end

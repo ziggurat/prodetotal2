@@ -1,0 +1,2 @@
+module ChallengeHelper
+end
