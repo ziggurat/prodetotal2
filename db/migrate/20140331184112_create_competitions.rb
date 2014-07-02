@@ -9,7 +9,7 @@ class CreateCompetitions < ActiveRecord::Migration
       t.string :name
       t.date :start_date
       t.date :end_date
-      t.boolean :archive
+      t.boolean :archive, default: false
 
       t.timestamps
     end
