@@ -42,7 +42,7 @@ gem 'debugger', group: [:development, :test]
 gem 'ember-rails'
 gem 'ember-source', '>= 1.5.0'
 
-gem 'factory_girl', group: [:test]
+gem 'factory_girl_rails', group: [:test]
 gem 'rspec-rails', group: [:test]
 
 gem 'rubocop', require: false, group: [:development]
