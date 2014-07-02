@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140519222808) do
     t.string   "name"
     t.date     "start_date"
     t.date     "end_date"
+    t.boolean  "archive",             default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
