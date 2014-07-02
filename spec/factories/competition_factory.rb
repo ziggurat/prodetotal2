@@ -3,6 +3,6 @@ FactoryGirl.define do
     name "Test competition"
     start_date Time.now - 15.days
     end_date Time.now + 20.days
-    archive false    
+    archive false
   end
 end
